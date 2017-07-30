@@ -1,0 +1,11 @@
+<%= form_for(@user) do |f|%>
+<%= render 'shared/errors', object: f.object %>
+
+<%= f.label :name%>
+<%= f.text_field :name%>
+
+<%=f.label :email%>
+<%=f.text_field :email %>
+
+<%=f.submit "Sign up"%>
+<%end%>

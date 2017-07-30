@@ -1,0 +1,38 @@
+<div class="back">
+    <div class="center-problem-img">
+    <%=link_to problems_path do %>
+    <%=image_tag('home.png' , class: 'img-responsive' , size: "50")%>
+    <%end%>
+    <%if current_user%>
+    <%=link_to destroy_user_session_path, method: :delete do %>
+    <%=image_tag('exit.png' , class: 'img-responsive', size: "50")%>
+    <%end%>
+    <%end%>
+    <%=link_to new_problem_path do %>
+    <%=image_tag('new.png' , class: 'img-responsive', size: "50")%>
+    <%end%>
+</div>
+  <div class="center-problem">
+     <div class="problem">
+      <h3><%=@problem.title%></h3>
+      <p><%=@problem.description%></p>
+      </div>
+      <div class="problem-icons">
+      <%=link_to like_problem_path(@problem), method: :put do %>
+         <%=image_tag('up.png' , class: 'img-responsive')%>
+      <%end%>
+      <h2 class='text-center'><%=@problem.score%></h2>
+       <%=link_to dislike_problem_path(@problem), method: :put do %>
+         <%=image_tag('down.png' , class: 'img-responsive')%>
+      <%end%>
+      </div>
+  </div>
+  
+  <div class='container text-center'>
+  <h3>solutions</h3>
+<%= render partial: 'problems/solution', collection: @problem.solutions %>
+<%= render partial: 'solutions/form' %>
+</div>
+</div>
+
+

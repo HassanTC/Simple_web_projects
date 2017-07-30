@@ -1,0 +1,112 @@
+a:hover {
+	
+	text-decoration:underline;
+	color:#808080;
+}
+a:visited{
+	text-decoration:underline;
+	color:#808080;
+}
+
+#gmail{
+	
+	color:#808080;
+	text-decoration:none;
+	position:absolute;
+	right:210px;
+    margin:10px;
+}
+
+#images{
+	text-decoration:none;
+	color:#808080;
+	position:absolute;
+	right:150px;
+	margin:11px;
+}
+#toptab{
+	border: 1px none black;
+	position:absolute;
+	top:20px;
+	right: 127px;
+}
+
+td{
+	border:1px solid #787878;
+	background-color: #787878;
+}
+#sign{
+	
+	background-color:#0066FF;
+	width:5%;
+	border-radius:4.5px;
+	padding:6px;
+	text-align:center;
+	color:white;
+	font-size:1em;
+	margin-top:10px;
+	margin-right:20px;
+	margin-left:20px;
+	position:absolute;
+	right:14px;
+	top:5px;
+}
+#lucky{
+	
+	position:absolute;
+	bottom:460px;
+    right:570px;
+	background-color:#D0D0D0;
+	border-radius:5px;
+	width:10%;
+	height:4%;
+	
+	}
+#see{
+	position:absolute;
+	bottom:460px;
+	left:450px;
+	background-color:#D0D0D0;
+	border-radius:5px;
+	width:10%;
+	height:4%;
+	
+}
+#google{
+	position:absolute;
+	top:175px;
+	right:43%;
+}
+#search{
+	width:43%;
+	height:27px;
+	position:absolute;
+	right:30%;
+	top:300px;
+	margin:20px;
+	
+}
+a{
+	margin:19px;
+}
+#footer{
+	
+	position:absolute;
+	bottom:0;
+	left:0;
+	width:85%;
+	padding:10px;
+	margin:0;
+	background-color:#E8E8E8 ;
+	border-radius:10px;
+}
+#final{
+		position:absolute;
+	bottom:0;
+	right:0;
+	width:25%;
+	padding:10px;
+	margin:0;
+	background-color:#E8E8E8 ;
+	border-radius:10px;
+}

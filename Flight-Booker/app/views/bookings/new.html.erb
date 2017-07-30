@@ -1,0 +1,21 @@
+<h3>flight no: <%=@flight.id%>  From <%=@flight.from_airport.code%> TO <%=@flight.to_airport.code%> Date <%=@flight.try(:begin).try(:strftime, '%B %e, %Y') %> Time <%=@flight.try(:begin).try(:strftime, '%H:%M')%></h3>
+<%=form_for @booking do |flight|%>
+
+              <%= flight.fields_for :passengers do |passenger| %>
+		            <%= passenger.label :name, "Name:"%>
+               
+		            <%= passenger.text_field :name%>
+              
+             
+		             <%= passenger.label :email%>
+        
+		              <%= passenger.text_field :email%>
+<br />
+	     <% end %>
+
+        <%= hidden_field_tag(:passengers, params[:passengers]) %>
+        <%= flight.hidden_field :flight_id, value: params[:flight_id] %>
+        <%= hidden_field_tag(:flight_id, params[:flight_id]) %>
+  
+	       <%= flight.submit "Get Your Ticket"%>
+<%end%>

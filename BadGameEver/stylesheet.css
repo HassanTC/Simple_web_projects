@@ -1,0 +1,17 @@
+div{
+	height:50px;
+	width:50px;
+	border-radius:10px;
+	background-color:red;
+	margin:2px;
+	display:inline-block;
+	
+	
+}
+
+button{
+	margin:10px;
+}
+span{
+	display:block;
+}

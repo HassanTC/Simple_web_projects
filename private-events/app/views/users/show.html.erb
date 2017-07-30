@@ -1,0 +1,13 @@
+<%=@user.name%><br / >
+<%=@user.email%>
+<% if @user.created_events.any?%>
+<%@user.created_events.each do |event|%>
+<p><%=event.summry%></p>
+<p><%=event.location%></p>
+<p><%=event.event_date%></p>
+<p><%=event.start_time%></p>
+<%end%>
+<%end%>
+<%@user.attended_events.each do |f|%>
+<%=f.summry%>
+<%end%>

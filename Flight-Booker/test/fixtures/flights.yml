@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start_id: 1
+  finish_id: 1
+  start: 2016-01-16 22:52:07
+  duration: 1.5
+
+two:
+  start_id: 1
+  finish_id: 1
+  start: 2016-01-16 22:52:07
+  duration: 1.5

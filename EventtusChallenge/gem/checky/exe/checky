@@ -1,0 +1,27 @@
+#!/usr/bin/env ruby
+require "bundler/setup"
+require "checky"
+
+gempath = ARGV[0]
+
+  unless File.exists?(File.expand_path(gempath.to_s))
+    puts "Gemfile has bees added  succefully"
+  else
+    gempath = "testgemfile"
+    puts "You have been entered wrong Gmfile will print a simple data"
+  end
+
+viewr = Checky::Viewer.new(RUBY_PLATFORM, gempath)
+
+if viewr.liblist.empty?
+  puts "Congrats, no libs Found!"
+else
+  puts "You need to install the following system libararies"
+  viewr.liblist.each do |key, array|
+    puts "The system libararies required for #{key}"
+    puts "----------------------------------------"
+    puts array
+    puts "installing...."
+    exec viewr.installer + " " + array.join(" ")
+  end
+end

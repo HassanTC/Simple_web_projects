@@ -1,0 +1,37 @@
+<!-- <form accept-charset="UTF-8" action="/users" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <label for="username">Username:</label>
+  <input id="username"  name="user[username]" type="text"><br>
+  <label for="email">e-mail:</label>
+  <input id="email" name="user[email]" type="text"><br>
+  <label for="password">Password:</label>
+  <input id="password" name="user[password]" type="password"><br>
+  <input type="submit" value="Submit">
+</form> -->
+
+<!-- <%= form_tag("/users", method: "post") do %>
+<%=label_tag(:usernam, "username :" ) %>
+<%= text_field_tag(:username)%><br/>
+<%=label_tag(:email, "E-mail:")%> 
+<%=text_field_tag(:email)%><br/>
+<%=label_tag(:password, "password:")%>
+<%=password_field_tag(:password)%><br/>
+<%=submit_tag("Submit")%>
+<%end%> -->
+
+<%= form_for @user do |f|%>
+<ul>
+  <% @user.errors.full_messages.each do |error| %>
+  <li><%= error %></li>
+  <% end %>
+</ul>
+Your Username Here Please :<%=f.text_field :username, :value => "example"%>
+<br/>
+
+Type your Email Here :-<%=f.text_field :email,:value => "example@email.com"%>
+<br/>
+
+Please Type strong password :<%=f.password_field :password%>
+<br/>
+<%=f.submit "Submit"%>
+<%end%>

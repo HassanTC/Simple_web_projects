@@ -1,0 +1,109 @@
+// Place all the styles related to the StaticPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body,html{
+	height: 100%;
+	width:100%;
+}
+.cover{
+	min-height: 100%;
+	background-image: image-url("home-cover.jpg");
+	background-color:#DDD;
+	background-size:cover;
+	margin: auto auto;
+	display: flex;
+	align-items: center;
+	height:auto;
+	border: 3px solid rgba(0, 0, 0, .5);
+	background-repeat: no-repeat;
+}
+.center{
+  min-width:50%;
+  display: table;
+  margin: 0 auto;
+  height:auto;
+  border: 3px solid rgba(0, 0, 0, .5);
+  border-radius: 15px;
+  padding: 20px;
+}
+.icons{
+	float: left;
+	text-align: center;
+	width: 50%;
+	margin: 0 auto;
+}
+.center-form{
+  min-width:50%;
+  display: table;
+  margin: 100px auto;
+  height:auto;
+  border: 3px solid rgba(255,255,255,.5);
+  border-radius: 15px;
+  padding: 20px;
+
+}
+.back {
+	min-height: 100%;
+	background-color:#136a8a;
+	background-size:cover;
+	margin: auto auto;
+	display: flex;
+	align-items: center;
+	height:auto;
+	display:block !important;
+	padding:25px;
+	mafgin-top:-10px;
+	}
+.center-problem{
+ 	width:50%;
+  display: table;
+  margin: 10px auto;
+  height:auto;
+  border: 3px solid rgba(255,255,255,.5);
+  border-radius: 15px;
+  padding: 20px;
+
+
+}
+.center-problem:hover{
+	background-color:white;
+}
+.problem{
+	width:80%;
+	float:right;
+	margin: 0 auto;
+	text-algin:center;
+	padding: 25px;
+}
+.problem-icons{
+	width:20%;
+	float:right;
+	margin: 0 auto;
+	text-algin:center;	
+}
+
+#clear{
+	clear: both;
+
+}
+.header{
+	text-align:center;
+}
+.center-problem-img{
+  display: table;
+  margin: 10px auto;
+  height:auto;
+  border: 3px solid rgba(255,255,255,.5);
+  border-radius: 15px;
+  padding: 20px;
+  position:fixed;
+  background-color:white;
+}
+
+.center-problem-img img{
+	padding:5px;
+	 display:inline;
+	 float:right;
+	 margin:0 auto;
+	 text-align:center;
+}

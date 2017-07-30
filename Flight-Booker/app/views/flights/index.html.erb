@@ -1,0 +1,32 @@
+<h1>Search For A Flight !</h1>
+<%= form_tag(flights_path, method: "get") do %>
+
+<%= label_tag(:from_airport_id, "From Airport:") %>
+<%=select_tag(:from_airport_id , options_for_select(@airports , @from_airport))%>
+
+<%= label_tag(:to_airport_id , "To Airport") %>
+<%= select_tag(:to_airport_id , options_for_select(@airports , @to_airport))%>
+
+<%=label_tag(:travelars , "Number Of Travelers")%>
+<%=select_tag(:travelars , options_for_select(@travel_opetions , @travelars))%>
+
+<%=label_tag(:begin , "Time Of The Trip")%>
+<%=select_tag(:begin , options_for_select(@calender_all , @begin))%>
+
+<%=submit_tag "Search"%>
+<% end %>
+
+<% unless @flights.empty?%>
+<%=form_tag(bookings_new_path , method: "get") do%>
+<%@flights.each do |f|%>
+   
+   <h3>flight no: <%=f.id%> <%=radio_button_tag(:flight_id , f.id)%> From <%=f.from_airport.code%> TO <%=f.to_airport.code%> Date <%=f.try(:begin).try(:strftime, '%B %e, %Y') %> Time <%=f.try(:begin).try(:strftime, '%H:%M')%></h3>
+
+      
+   
+<%end%>
+
+<%= hidden_field_tag(:travelars, params[:travelars]) %>
+					<%= submit_tag"Continue"%>
+<%end%>
+<%end%>
